@@ -8,7 +8,7 @@ $(document).ready(() => {
 
 function getMovies(searchText) {
   axios
-    .get(`http://www.omdbapi.com/?s=${searchText}&apikey=3d27da5d`)
+    .get(`https://www.omdbapi.com/?s=${searchText}&apikey=3d27da5d`)
     .then((response) => {
       // console.log(response.data.Search);
       let movies = response.data.Search;
@@ -40,7 +40,7 @@ function movieSelected(id) {
 function getMovie() {
   let movieId = sessionStorage.getItem("movieId");
   axios
-    .get(`http://www.omdbapi.com/?i=${movieId}&apikey=3d27da5d`)
+    .get(`https://www.omdbapi.com/?i=${movieId}&apikey=3d27da5d`)
     .then((response) => {
       console.log(response.data);
       let movie = response.data;
